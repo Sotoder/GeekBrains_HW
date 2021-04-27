@@ -1,0 +1,16 @@
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\bin\Debug\net5.0\Homework1.exe
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\bin\Debug\net5.0\Homework1.deps.json
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\bin\Debug\net5.0\Homework1.runtimeconfig.json
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\bin\Debug\net5.0\Homework1.runtimeconfig.dev.json
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\bin\Debug\net5.0\Homework1.dll
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\bin\Debug\net5.0\ref\Homework1.dll
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\bin\Debug\net5.0\Homework1.pdb
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\Homework1.csprojAssemblyReference.cache
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\Homework1.GeneratedMSBuildEditorConfig.editorconfig
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\Homework1.AssemblyInfoInputs.cache
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\Homework1.AssemblyInfo.cs
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\Homework1.csproj.CoreCompileInputs.cache
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\Homework1.dll
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\ref\Homework1.dll
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\Homework1.pdb
+C:\С#\GeekBreans\C#\1\Homework1\Homework1\obj\Debug\net5.0\Homework1.genruntimeconfig.cache

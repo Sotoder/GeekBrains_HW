@@ -1,0 +1,16 @@
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ChangeNumbers_Homework.GeneratedMSBuildEditorConfig.editorconfig
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ChangeNumbers_Homework.AssemblyInfoInputs.cache
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ChangeNumbers_Homework.AssemblyInfo.cs
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ChangeNumbers_Homework.csproj.CoreCompileInputs.cache
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\bin\Debug\net5.0\ChangeNumbers_Homework.exe
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\bin\Debug\net5.0\ChangeNumbers_Homework.deps.json
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\bin\Debug\net5.0\ChangeNumbers_Homework.runtimeconfig.json
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\bin\Debug\net5.0\ChangeNumbers_Homework.runtimeconfig.dev.json
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\bin\Debug\net5.0\ChangeNumbers_Homework.dll
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\bin\Debug\net5.0\ref\ChangeNumbers_Homework.dll
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\bin\Debug\net5.0\ChangeNumbers_Homework.pdb
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ChangeNumbers_Homework.dll
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ref\ChangeNumbers_Homework.dll
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ChangeNumbers_Homework.pdb
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ChangeNumbers_Homework.genruntimeconfig.cache
+C:\С#\GeekBreans\C#\1\ChangeNumbers_Homework\ChangeNumbers_Homework\obj\Debug\net5.0\ChangeNumbers_Homework.csprojAssemblyReference.cache

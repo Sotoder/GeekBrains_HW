@@ -1,0 +1,16 @@
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\IMT_homework.csprojAssemblyReference.cache
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\IMT_homework.GeneratedMSBuildEditorConfig.editorconfig
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\IMT_homework.AssemblyInfoInputs.cache
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\IMT_homework.AssemblyInfo.cs
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\IMT_homework.csproj.CoreCompileInputs.cache
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\bin\Debug\net5.0\IMT_homework.exe
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\bin\Debug\net5.0\IMT_homework.deps.json
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\bin\Debug\net5.0\IMT_homework.runtimeconfig.json
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\bin\Debug\net5.0\IMT_homework.runtimeconfig.dev.json
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\bin\Debug\net5.0\IMT_homework.dll
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\bin\Debug\net5.0\ref\IMT_homework.dll
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\bin\Debug\net5.0\IMT_homework.pdb
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\IMT_homework.dll
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\ref\IMT_homework.dll
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\IMT_homework.pdb
+C:\С#\GeekBreans\C#\1\IMT_homework\IMT_homework\obj\Debug\net5.0\IMT_homework.genruntimeconfig.cache
