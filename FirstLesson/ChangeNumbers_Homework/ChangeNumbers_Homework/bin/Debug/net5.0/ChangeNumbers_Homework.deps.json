@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ChangeNumbers_Homework/1.0.0": {
+        "runtime": {
+          "ChangeNumbers_Homework.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ChangeNumbers_Homework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
