@@ -4,10 +4,12 @@ namespace ShowFIO
 {
     class Program
     {
+  
         static void Main()
         {
             int x, y;
             string name, sName, city;
+            ConsoleComands cc = new ConsoleComands(); //Подключение другого класса, для получения доступа к его методам
 
             Console.Write("Введите ваше имя:");
             name = Console.ReadLine();
@@ -16,15 +18,18 @@ namespace ShowFIO
             Console.Write("Введите город в котором вы проживаете:");
             city = "г. " + Console.ReadLine();
 
-
+            
 
             //а) Вывести ФИО и название города
             Console.Clear();
+            cc.ChangeColor(ConsoleColor.Red);
             Console.WriteLine($"{name} {sName}\n{city}");
-            ConsolePause();
+            cc.Pause();
+            cc.ResetColor();
 
             //б) Вывести ФИО и название города по центру
             Console.Clear();
+            cc.ChangeColor(ConsoleColor.Green);
             string[] messege = new string[2] { (name + " " + sName), city};
             y = (Console.WindowHeight / 2) - 1 - (messege.Length / 2);
 
@@ -41,21 +46,17 @@ namespace ShowFIO
                     x = 0;
                     y = Console.WindowHeight;
                     Console.SetCursorPosition(x, y);
-                    ConsolePause();
+                    cc.Pause();
                 }
 
             }
+            cc.ResetColor();
 
             //в) Вывести ФИО и название города по центру используя методы
             CenterPrint(messege);
 
         }
 
-        private static void ConsolePause()
-        {
-            Console.Write("Для продолжения нажмите любую клавишу");
-            Console.ReadLine();
-        }
 
         private static void TensileAlignment(string[] messegeForPrint, int width, int height) // Отцентровка при изменении размеров окна, и по хорошему тут не хватает более адекватной проверки
                                                                                               // на выход курсора из ренжа координат при слишком сильном сжатии окна,
