@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\С#\\GeekBreans\\C#\\1\\IMT_homework\\IMT_homework\\IMT_homework.csproj",
+      "projectUniqueName": "C:\\С#\\GeekBreans\\GeekBrains_HW\\FirstLesson\\IMT_homework\\IMT_homework\\IMT_homework.csproj",
       "projectName": "IMT_homework",
-      "projectPath": "C:\\С#\\GeekBreans\\C#\\1\\IMT_homework\\IMT_homework\\IMT_homework.csproj",
+      "projectPath": "C:\\С#\\GeekBreans\\GeekBrains_HW\\FirstLesson\\IMT_homework\\IMT_homework\\IMT_homework.csproj",
       "packagesPath": "C:\\Users\\sotod\\.nuget\\packages\\",
-      "outputPath": "C:\\С#\\GeekBreans\\C#\\1\\IMT_homework\\IMT_homework\\obj\\",
+      "outputPath": "C:\\С#\\GeekBreans\\GeekBrains_HW\\FirstLesson\\IMT_homework\\IMT_homework\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sotod\\AppData\\Roaming\\NuGet\\NuGet.Config",

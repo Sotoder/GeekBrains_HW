@@ -26,18 +26,23 @@ namespace IMT_homework
 
             Console.WriteLine($"Ваш ИМТ равен: {bmi}");
 
-            if (bmi < 18)
+            if (bmi < 18.5f)
             {
                 Console.WriteLine($"Вы еще тут? Ветром не сдуло? Вас бы накормить");
             }
-            else if (bmi >= 18 && bmi < 25) 
+            else if (bmi >= 18.5f && bmi < 25f)
             {
                 Console.WriteLine($"Ваш ИМТ в норме! Лови пятюню");
             }
-            else if (bmi >= 25 && bmi <= 30)
+            else if (bmi >= 25f && bmi < 30f)
             {
                 Console.WriteLine($"Вы чет пухленький, может физкультурки?");
-            } else
+            }
+            else if (bmi >= 30f && bmi < 35f)
+            {
+                Console.WriteLine($"Вы сильно пухленький, может диеты с физкультуркой?");
+            }
+            else
             {
                 Console.WriteLine($"Да вы прям жирненький, попробуйте не жраТ!");
             }
