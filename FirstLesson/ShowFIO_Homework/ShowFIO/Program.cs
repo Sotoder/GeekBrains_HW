@@ -33,23 +33,18 @@ namespace ShowFIO
             string[] messege = new string[2] { (name + " " + sName), city};
             y = (Console.WindowHeight / 2) - 1 - (messege.Length / 2);
 
-            for (int i = 0; i <= messege.Length; i++)
+            for (int i = 0; i <= messege.Length-1; i++)
             {
-                if (i <= messege.Length - 1)
-                {
-                    x = (Console.WindowWidth / 2) - (messege[i].Length / 2);
-                    Console.SetCursorPosition(x, y);
-                    Console.WriteLine(messege[i]);
-                    y = Console.CursorTop;
-                } else
-                {
-                    x = 0;
-                    y = Console.WindowHeight;
-                    Console.SetCursorPosition(x, y);
-                    cc.Pause();
-                }
-
+                x = (Console.WindowWidth / 2) - (messege[i].Length / 2);
+                Console.SetCursorPosition(x, y);
+                Console.WriteLine(messege[i]);
+                y = Console.CursorTop;
             }
+            
+            x = 0;
+            y = Console.WindowHeight;
+            Console.SetCursorPosition(x, y);
+            cc.Pause();
             cc.ResetColor();
 
             //в) Вывести ФИО и название города по центру используя методы
