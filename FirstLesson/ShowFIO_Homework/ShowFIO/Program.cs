@@ -53,38 +53,47 @@ namespace ShowFIO
         }
 
 
-        private static void TensileAlignment(string[] messegeForPrint, int width, int height) // Отцентровка при изменении размеров окна, и по хорошему тут не хватает более адекватной проверки
-                                                                                              // на выход курсора из ренжа координат при слишком сильном сжатии окна,
-                                                                                              // эта ломается если сжимать окно не по ширине, а по высоте.
-                                                                                              // Есть еще один экспаншен на Console.Clear() - если прям в ноль окно сжать по диагонали, но его я не понял нахрапом 
-                                                                                              // Ну и работать это будет как я понимаю только в ОП Windows, без проверки совместимости платформы.
+        private static void TensileAlignment(string[] messegeForPrint, int width, int height) // Отцентровка при изменении размеров окна, убрал блок try, заменив его на каскад if...else для переделки отцентровки
+                                                                                              // при сильном сжатии окна, теперь работает лучше, не вызывает экспаншен по оси Y.
+                                                                                              // Есть еще один экспаншен на Console.Clear() и установку координат - если прям в ноль окно. 
+                                                                                              // Я так понимаю полностью уменьшенное окно консоли нельзя очистить и ему нельзя задать какие-либо координаты.
+                                                                                              // Я обернул все это в try - не знаю сколь это правильно, но по хорошему если задать координату нельзя
+                                                                                              // лучше её не задавать совсем.
+                                                                                              // Ну и вопрос: По хорошему, в крупных проектах, лучше использовать try для обхода ошибок или
+                                                                                              // вот так, каскадом if-ов, это тоже допустимо?
         {
             int x, y;  
             while (true) 
             {
-                if (width != Console.WindowWidth || height != Console.WindowHeight)
+                try
                 {
-                    Console.Clear();
-                    width = Console.WindowWidth;
-                    height = Console.WindowHeight;
-                    y = (height / 2) - 1 - (messegeForPrint.Length / 2);
-                    for (int i = 0; i <= messegeForPrint.Length - 1; i++)
+                    if (width != Console.WindowWidth || height != Console.WindowHeight)
                     {
-                        x = (width / 2) - (messegeForPrint[i].Length / 2);
-                        try
+                        Console.Clear();
+                        width = Console.WindowWidth;
+                        height = Console.WindowHeight;
+                        y = (height / 2) - 1 - (messegeForPrint.Length / 2);
+                        for (int i = 0; i <= messegeForPrint.Length - 1; i++)
                         {
-                            Console.SetCursorPosition(x, y);
-                        }
-                        catch
-                        {
-                            Console.WindowWidth = messegeForPrint[0].Length;
-                            Console.WindowHeight = 20;
-                        }                       
-                        Console.WriteLine(messegeForPrint[i]);
-                        y = Console.CursorTop;
-                    }
+                            x = (width / 2) - (messegeForPrint[i].Length / 2);
 
+                            if (x < 0)
+                            {
+                                if (y < 0)
+                                {
+                                    if (i == 0) { Console.SetCursorPosition(0, 0); }
+                                    else { Console.SetCursorPosition(0, Console.CursorTop); }
+                                }
+                                else { Console.SetCursorPosition(0, y); }
+                            }
+                            else { Console.SetCursorPosition(x, y); }
+                            Console.WriteLine(messegeForPrint[i]);
+                            y = Console.CursorTop;
+                        }
+
+                    }
                 }
+                catch { }
             }
 
         }
