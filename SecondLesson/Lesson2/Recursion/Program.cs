@@ -46,7 +46,7 @@ namespace Recursion
         //б) * Разработать рекурсивный метод, который считает сумму чисел от a до b.
         private object WriteSum(int a, int b)
         {
-            if (a < b)
+            if (a <= b)
             {
                 WriteSum(a, b - 1);
                 resultSum += b;
@@ -57,10 +57,10 @@ namespace Recursion
         ////a) Разработать рекурсивный метод, который выводит на экран числа от a до b(a<b).
         private string WriteSequence(int a, int b)
         {
-            if (a < b)
+            if (a <= b)
             {
                 WriteSequence(a, b-1);
-                resultStr += b;
+                resultStr += b.ToString() + " ";
             }
             return resultStr;
         }
