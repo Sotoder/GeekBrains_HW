@@ -1,45 +1,37 @@
 ﻿using System;
+using MyMethods;
 
 namespace MinNumber
 {
+    //Скворцов А.В.
+    // 1. Написать метод, возвращающий минимальное из трёх чисел.
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите число(желательно побольше)");
-            string num = SetParam(Console.ReadLine());
-            int sum = CountNumbersInNumber(num);
-            Console.WriteLine($"Число состоит из {sum} чисел");
-            Console.ReadLine();
+            Console.WriteLine("Введите последовательно 3 числа");
+            MinNumber(Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
         }
 
-        private static int CountNumbersInNumber(string num)
+        private static void MinNumber(string a, string b, string c)
         {
-            int sum = 0;
-            foreach (char a in num)
-            {
-                sum++;
-            }
-            return sum;
-        }
+            long first = UsefulThings.CheckAndSetParamLong(a);
+            long second = UsefulThings.CheckAndSetParamLong(b);
+            long third = UsefulThings.CheckAndSetParamLong(c);
+            long min;
 
-        private static string SetParam(string strFromConsole)
-        {
-            int param = 0;
-
-            while (param == 0)
+            //Сравниваем конструкцией if
+            if (first >= second)
             {
-                if (Int32.TryParse(strFromConsole, out int checkedInt))
-                {
-                    param = checkedInt;
-                }
-                else
-                {
-                    Console.Write("Пожалуйста, вводите только целые числа (десятичные будут округлены до целого). Повторите ввод:");
-                    strFromConsole = Console.ReadLine();
-                }
+                if (second >= third) min = third;
+                else min = second;
             }
-            return param.ToString();
+            else min = first;
+            Console.WriteLine($"Конструкция if. Минимальное число: {min}");
+
+            //Сравниваем через Math.Min
+            min = Math.Min(first, second >= third ? second : third);
+            Console.WriteLine($"Конструкция Math.Min. Минимальное число: {min}");
         }
     }
 }

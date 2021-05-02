@@ -2,10 +2,10 @@
 
 namespace IMT_Homework_L2
 {
+    // Скворцов А.В.
+    //5. а) Написать программу, которая запрашивает массу и рост человека, вычисляет его индекс массы и сообщает, нужно ли человеку похудеть, набрать вес или всё в норме.
     class Program
     {
-        // Скворцов А.В.
-        //5. а) Написать программу, которая запрашивает массу и рост человека, вычисляет его индекс массы и сообщает, нужно ли человеку похудеть, набрать вес или всё в норме.
         static void Main(string[] args)
         {
             string name;
@@ -16,10 +16,10 @@ namespace IMT_Homework_L2
 
             Console.Write(name + ", укажите ваш вес в килограммах:");
             string tmpString = Console.ReadLine();
-            weight = SetParam(tmpString, "W");
+            weight = CheckAndSetParam(tmpString, "W");
             Console.Write(name + ", укажите ваш рост в метрах:");
             tmpString = Console.ReadLine();
-            height = SetParam(tmpString, "H");
+            height = CheckAndSetParam(tmpString, "H");
 
             bmi = CalcBMI(weight, height);
             Console.WriteLine("Ваш ИМТ равен: {0:f2}", bmi);
@@ -38,7 +38,7 @@ namespace IMT_Homework_L2
                 >= 18.5 and <= 24.9 => $"Ваш ИМТ в норме! Лови пятюню",
                 > 24.9 and <= 29.9 => $"Вы чет пухленький, может физкультурки? Вам надо скинуть минимум {CalcFat(weight, height, true)} кг",
                 > 29.9 and <= 35.4 => $"Вы сильно пухленький, может диеты с физкультуркой? Вам надо скинуть минимум {CalcFat(weight, height, true)} кг",
-                _ => $"Да вы прям жирненький, попробуйте не жраТ! Вам надо скинуть минимум {CalcFat(weight, height, true)} кг"
+                _ => $"Да вы прям жирненький, попробуйте совсем не жраТ! Вам надо скинуть минимум {CalcFat(weight, height, true)} кг"
             };
              Console.WriteLine(comparsionResult);
         }
@@ -56,7 +56,7 @@ namespace IMT_Homework_L2
             return Math.Abs(Math.Round(weight - (fat ? normalMaxWight : normalMinWight), 2));
         }
 
-        private static double SetParam(string strFromConsole, string paramName)
+        private static double CheckAndSetParam(string strFromConsole, string paramName)
         {
             double param = 0;
 
@@ -72,9 +72,8 @@ namespace IMT_Homework_L2
                     {
                         "W" => "Пожалуйста, вводите значения веса цифрами. Повторите ввод:",
                         "H" => "Пожалуйста, вводите значения роста цифрами. Повторите ввод:",
-                        _=>""
                     };
-                    Console.WriteLine(checkParamName);
+                    Console.Write(checkParamName);
                     strFromConsole = Console.ReadLine();
                 }
             }
