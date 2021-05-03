@@ -60,7 +60,7 @@ namespace Recursion
             if (a <= b)
             {
                 WriteSequence(a, b-1);
-                resultStr += b.ToString() + " ";
+                resultStr += (b == a ? "" : ", ") + b.ToString();
             }
             return resultStr;
         }
