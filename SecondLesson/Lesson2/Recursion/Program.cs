@@ -102,13 +102,12 @@ namespace Recursion
             // запускаем рекурсию
             if (a <= b)
             {
-                switch (ot)
+                // выбираем нужное нам действие
+                funStr = ot switch
                 {
-                    case OpType.sum: funStr += (a + Convert.ToInt32(RecursionFun(a + 1, b)[1])).ToString();
-                        break;
-                    case OpType.seq: funStr += a.ToString() + (a == b ? "" : ", ") + RecursionFun(a + 1, b)[0];
-                        break;
-                }
+                    OpType.sum => funStr + (a + Convert.ToInt32(RecursionFun(a + 1, b)[1])).ToString(),
+                    OpType.seq => funStr + a.ToString() + (a == b ? "" : ", ") + RecursionFun(a + 1, b)[0]
+                };
             }
             return funStr;
         }
