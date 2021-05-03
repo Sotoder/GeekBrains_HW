@@ -39,16 +39,17 @@ namespace Recursion
                 }
             }
 
+            // на всякий случай обнуляем глобальные переменные
+            resultStr = "";
+            resultSum = 0;
             CalcSumCollectSeq(a, b);
+
             Console.WriteLine($"Последовательность чисел от {a} до {b}: {resultStr}");
             Console.WriteLine($"Сумма всех чисел от {a} до {b}: {resultSum}");
         }
 
         private void CalcSumCollectSeq(int a, int b)
         {
-            // на всякий случай обнуляем глобальные переменные
-            resultStr = "";
-            resultSum = 0;
 
             // запускаем рекурсию
             if (a <= b)
