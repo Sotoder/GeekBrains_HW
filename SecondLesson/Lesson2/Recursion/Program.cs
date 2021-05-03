@@ -44,8 +44,17 @@ namespace Recursion
             resultSum = 0;
             CalcSumCollectSeq(a, b);
 
+            //рекурсивным методом с глобальными переменными
+            Console.WriteLine($"-------------------------------------------\nМетодом");
             Console.WriteLine($"Последовательность чисел от {a} до {b}: {resultStr}");
             Console.WriteLine($"Сумма всех чисел от {a} до {b}: {resultSum}");
+
+            // рекурсивной функцией
+            string[] recursionResult = RecursionFun(a, b);
+            Console.WriteLine($"-------------------------------------------\nФункцией");
+            Console.WriteLine($"Последовательность чисел от {a} до {b}: {recursionResult[0]}");
+            Console.WriteLine($"Сумма всех чисел от {a} до {b}: {recursionResult[1]}");
+            
         }
 
         private void CalcSumCollectSeq(int a, int b)
@@ -58,6 +67,22 @@ namespace Recursion
                 resultSum += b;
                 resultStr += (b == a ? "" : ", ") + b.ToString();
             }
+        }
+
+        private string[] RecursionFun(int a, int b)
+        {
+            string[] resultArr = new string[] {"",""};
+            string seqStr = "";
+            int sum = 0;
+            // запускаем рекурсию
+            if (a <= b)
+            {
+                sum += a + Convert.ToInt32(RecursionFun(a + 1, b)[1]);
+                seqStr += a.ToString() + (a==b ? "" : ", ") + RecursionFun(a+1, b)[0];
+            }
+            resultArr[0] = seqStr;
+            resultArr[1] = sum.ToString();
+            return resultArr;
         }
     }
 }
