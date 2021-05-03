@@ -8,6 +8,11 @@ namespace Recursion
     {
         public string resultStr;
         public int resultSum;
+        public enum OpType
+        {
+            sum,
+            seq
+        }
         static void Main(string[] args)
         {
             Program program = new();
@@ -54,7 +59,12 @@ namespace Recursion
             Console.WriteLine($"-------------------------------------------\nФункцией");
             Console.WriteLine($"Последовательность чисел от {a} до {b}: {recursionResult[0]}");
             Console.WriteLine($"Сумма всех чисел от {a} до {b}: {recursionResult[1]}");
-            
+
+            //рекурсивная функция со свитчем
+            Console.WriteLine($"-------------------------------------------\nФункцией с переключателем");
+            Console.WriteLine($"Последовательность чисел от {a} до {b}: {RecursionFun(a,b, OpType.seq)}");
+            Console.WriteLine($"Сумма всех чисел от {a} до {b}: {RecursionFun(a, b, OpType.sum)}");
+
         }
 
         private void CalcSumCollectSeq(int a, int b)
@@ -83,6 +93,24 @@ namespace Recursion
             resultArr[0] = seqStr;
             resultArr[1] = sum.ToString();
             return resultArr;
+        }
+
+        private string RecursionFun(int a, int b, OpType ot)
+        {
+            string funStr = "";
+
+            // запускаем рекурсию
+            if (a <= b)
+            {
+                switch (ot)
+                {
+                    case OpType.sum: funStr += (a + Convert.ToInt32(RecursionFun(a + 1, b)[1])).ToString();
+                        break;
+                    case OpType.seq: funStr += a.ToString() + (a == b ? "" : ", ") + RecursionFun(a + 1, b)[0];
+                        break;
+                }
+            }
+            return funStr;
         }
     }
 }
