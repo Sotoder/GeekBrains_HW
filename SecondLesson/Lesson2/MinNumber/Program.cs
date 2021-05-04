@@ -21,7 +21,7 @@ namespace MinNumber
             long min;
 
             //Сравниваем конструкцией if
-            if (first >= second)
+            if (first >= second || first >=third)
             {
                 if (second >= third) min = third;
                 else min = second;
@@ -30,7 +30,7 @@ namespace MinNumber
             Console.WriteLine($"Конструкция if. Минимальное число: {min}");
 
             //Сравниваем через Math.Min
-            min = Math.Min(first, second >= third ? second : third);
+            min = Math.Min(first, second <= third ? second : third);
             Console.WriteLine($"Конструкция Math.Min. Минимальное число: {min}");
         }
     }
