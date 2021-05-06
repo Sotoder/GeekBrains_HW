@@ -23,20 +23,20 @@ namespace ComplexNumbers
             switch (tn)
             {
                 case TypeNumbers.complex:
-                    view.Print($"Первое комплексное число");
+                    view.PrintLine($"Первое комплексное число");
                     Complex x1 = view.GetDataComplex();
-                    view.Print($"Второе комплексное число");
+                    view.PrintLine($"Второе комплексное число");
                     Complex x2 = view.GetDataComplex();
 
-                    view.Print(x1.Plus(x2).ToString());
+                    view.PrintLine(x1.Plus(x2).ToString());
                     break;
                 case TypeNumbers.fractional:
-                    view.Print($"Первое дробное число");
+                    view.PrintLine($"Первое дробное число");
                     Fractional a = view.GetDataFractional();
-                    view.Print($"Второе дробное число");
+                    view.PrintLine($"Второе дробное число");
                     Fractional b = view.GetDataFractional();
 
-                    view.Print(a.Plus(b).ToString());
+                    view.PrintLine(a.Plus(b).ToString());
                     break;
             }
         }
@@ -48,20 +48,20 @@ namespace ComplexNumbers
             switch (tn)
             {
                 case TypeNumbers.complex:
-                    view.Print($"Первое комплексное число");
+                    view.PrintLine($"Первое комплексное число");
                     Complex x1 = view.GetDataComplex();
                     view.Print($"Второе комплексное число");
                     Complex x2 = view.GetDataComplex();
 
-                    view.Print(x1.Minus(x2).ToString());
+                    view.PrintLine(x1.Minus(x2).ToString());
                     break;
                 case TypeNumbers.fractional:
-                    view.Print($"Первое дробное число");
+                    view.PrintLine($"Первое дробное число");
                     Fractional a = view.GetDataFractional();
-                    view.Print($"Второе дробное число");
+                    view.PrintLine($"Второе дробное число");
                     Fractional b = view.GetDataFractional();
 
-                    view.Print(a.Minus(b).ToString());
+                    view.PrintLine(a.Minus(b).ToString());
                     break;
             }
 
@@ -70,40 +70,40 @@ namespace ComplexNumbers
 
         public void MultC()
         {
-            view.Print($"Первое комплексное число");
+            view.PrintLine($"Первое комплексное число");
             Complex x1 = view.GetDataComplex();
-            view.Print($"Второе комплексное число");
+            view.PrintLine($"Второе комплексное число");
             Complex x2 = view.GetDataComplex();
 
             view.Print(x1.Multiply(x2).ToString());
         }
         public void MultZ()
         {
-            view.Print($"Первое комплексное число");
+            view.PrintLine($"Первое комплексное число");
             Complex x1 = view.GetDataComplex();
             int i = view.GetDataInteger();
 
-            view.Print(x1.Multiply(i).ToString());
+            view.PrintLine(x1.Multiply(i).ToString());
         }
 
         public void Mult()
         {
-            view.Print($"Первое дробное число");
+            view.PrintLine($"Первое дробное число");
             Fractional a = view.GetDataFractional();
-            view.Print($"Второе дробное число");
+            view.PrintLine($"Второе дробное число");
             Fractional b = view.GetDataFractional();
 
-            view.Print(a.Multiply(b).ToString());
+            view.PrintLine(a.Multiply(b).ToString());
         }
 
         public void Div()
         {
-            view.Print($"Первое дробное число");
+            view.PrintLine($"Первое дробное число");
             Fractional a = view.GetDataFractional();
-            view.Print($"Второе дробное число");
+            view.PrintLine($"Второе дробное число");
             Fractional b = view.GetDataFractional();
 
-            view.Print(a.Division(b).ToString());
+            view.PrintLine(a.Division(b).ToString());
         }
     }
 }

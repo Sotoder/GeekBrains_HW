@@ -10,9 +10,14 @@ namespace ComplexNumbers
         {
             Console.Clear();
         }
-        public void Print(string msg)
+        public void PrintLine(string msg)
         {
             Console.WriteLine(msg);
+        }
+
+        public void Print(string msg)
+        {
+            Console.Write(msg);
         }
 
         public Complex GetDataComplex()
