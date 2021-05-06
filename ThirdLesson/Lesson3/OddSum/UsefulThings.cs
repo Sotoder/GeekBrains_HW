@@ -15,7 +15,7 @@ namespace MyMethods
                 if (int.TryParse(strFromConsole, out int checkedLong))
                 {
                     param = checkedLong;
-                    flag = int.TryParse(strFromConsole, out checkedLong);
+                    flag = true;
                 }
                 else
                 {

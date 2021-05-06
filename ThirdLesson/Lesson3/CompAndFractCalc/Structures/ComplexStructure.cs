@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ComplexNumbers
+namespace Structures.ComplexNumbers
 {
     struct Complex
     {
@@ -25,29 +25,12 @@ namespace ComplexNumbers
             result.im = (this.im * y.re) + (this.re*y.im);
             return result;
         }
-        public string Print()
+        public override string ToString() => re switch
         {
-            string msg;
-            switch (re)
-            {
-                case 0 when im == 0:
-                    msg = $"Результат операции: 0";
-                    break;
-                case 0:
-                    msg = $"Результат операции: {im}i";
-                    break;
-                default:
-                    if (im == 0)
-                    {
-                        msg = $"Результат операции: {re}";
-                    }
-                    else
-                    {
-                        msg = $"Результат операции: {re} + {im}i";
-                    }
-                    break;
-            }
-            return msg;
-        }
+            0 when im == 0 => $"\nРезультат операции: 0",
+            0 => $"\nРезультат операции: {im}i",
+            > 0 or < 0 when im == 0 => $"\nРезультат операции: {re}",
+            > 0 or < 0 => $"\nРезультат операции: {re} + {im}i"
+        };
     }
 }

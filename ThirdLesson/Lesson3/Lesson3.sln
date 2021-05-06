@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OddSum", "OddSum\OddSum.csproj", "{6F13BE5B-5B34-4F9D-BC36-B7936D044BB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexNumbers", "ComplexNumbers\ComplexNumbers.csproj", "{78DFC49E-8CE0-40E2-AE3F-1F455F1E135D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompAndFractCalc", "CompAndFractCalc\CompAndFractCalc.csproj", "{78DFC49E-8CE0-40E2-AE3F-1F455F1E135D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
