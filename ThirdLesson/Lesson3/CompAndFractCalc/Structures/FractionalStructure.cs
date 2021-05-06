@@ -32,12 +32,12 @@ namespace Structures.ComplexNumbers
             }
         }
 
-        public int LCM(int den1, int den2) // Функция нахождения наименьшего общего кратного
+        public int LCM(int den1, int den2) // Функция нахождения наименьшего общего кратного, все входящие данные берутся по модулю, что бы не влиять на итоговый знак дроби.
         {
-            return (Math.Abs(den1) * Math.Abs(den2)) / GSF(den1, den2);
+            return (Math.Abs(den1 *den2)) / GSF(den1, den2);
         }
 
-        public int GSF(int den1, int den2) // Функция нахождения наибольшего общего делителя
+        public int GSF(int den1, int den2) // Функция нахождения наибольшего общего делителя, все входящие данные берутся по модулю, что бы не влиять на итоговый знак дроби.
         {
             int maxDen = Math.Abs(den1) > Math.Abs(den2) ? Math.Abs(den1) : Math.Abs(den2);
             int minDen = maxDen > Math.Abs(den2) ? Math.Abs(den2) : Math.Abs(den1);
