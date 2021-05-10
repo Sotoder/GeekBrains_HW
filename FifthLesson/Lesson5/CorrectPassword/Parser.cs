@@ -58,13 +58,13 @@ namespace CorrectPassword
                 {
                     errorCode = 1;
                 }
-                else if (CreateReg(@"^[A-z0-9]{0,1}$").IsMatch(password) || CreateReg(@"^[A-z0-9]{10,}$").IsMatch(password))
-                {
-                    errorCode = 2;
-                }
-                else if (CreateReg(@"[^A-z0-9]{1,}").IsMatch(password))
+                else if (CreateReg(@"[^A-z0-9]{1,}").IsMatch(password)) 
                 {
                     errorCode = 3;
+                }
+                else if (!CreateReg(@"^.{2,10}$").IsMatch(password))
+                {
+                    errorCode = 2;
                 }
             }
 
