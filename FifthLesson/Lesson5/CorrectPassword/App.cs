@@ -37,10 +37,5 @@ namespace CorrectPassword
         {
             Environment.Exit(0);
         }
-
-        public void RegularCheckPassword(string password)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

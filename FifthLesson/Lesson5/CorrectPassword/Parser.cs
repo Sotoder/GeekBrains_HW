@@ -47,22 +47,22 @@ namespace CorrectPassword
 
             
 
-            if (String.IsNullOrEmpty(password))
+            if (CreateReg(@"^$").IsMatch(password)) //проверка на нулевую строку
             {
                 errorCode = 4;
             }
             else
             {
 
-                if (CreateReg(@"^[0-9]+[A-z0-9]{1,}$").IsMatch(password))
-                {
-                    errorCode = 1;
-                }
-                else if (CreateReg(@"[^A-z0-9]{1,}").IsMatch(password)) 
+                if (CreateReg(@"[^A-z0-9]{1,}").IsMatch(password)) // проверка на ввод только цифр и букв латинского алфавита
                 {
                     errorCode = 3;
                 }
-                else if (!CreateReg(@"^.{2,10}$").IsMatch(password))
+                else if (CreateReg(@"^[0-9]+[A-z0-9]{1,}$").IsMatch(password)) //проверка на цифру в первом символе
+                {
+                    errorCode = 1;
+                }
+                else if (!CreateReg(@"^.{2,10}$").IsMatch(password)) //проверка на количество символов
                 {
                     errorCode = 2;
                 }
