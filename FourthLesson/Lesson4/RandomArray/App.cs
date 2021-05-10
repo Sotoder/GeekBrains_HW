@@ -38,11 +38,13 @@ namespace RandomArray
             
         }
 
-        private void PrintResult(int[] arrayForSearch, List<int> twises, int twiseCount)
+        private void PrintResult(int[] array, List<int> twises, int twiseCount)
         {
-            Console.WriteLine(string.Join("; ", arrayForSearch));
+            Console.WriteLine(string.Join("; ", array));
+            Console.WriteLine("--------------------------------------\n" +
+                "Количество пар:");
             Console.WriteLine(twiseCount);
-            Console.WriteLine("--------------------------------------\nПары:");
+            Console.WriteLine("\nПары:");
             for (int i = 0; i < twises.Count; i += 2)
             {
                 Console.WriteLine($"{twises[i].ToString().PadLeft(6)}:{twises[i + 1].ToString().PadLeft(6)}");
