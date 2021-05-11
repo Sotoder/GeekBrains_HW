@@ -41,11 +41,10 @@ namespace CorrectPassword
             return errorCode;
         }
 
-        internal int RegularCheckPassword(string password)
+        public int RegularCheckPassword(string password)
         {
             int errorCode = 0;
 
-            
 
             if (CreateReg(@"^$").IsMatch(password)) //проверка на нулевую строку
             {

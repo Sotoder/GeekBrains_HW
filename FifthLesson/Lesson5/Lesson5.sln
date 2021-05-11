@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrectPassword", "CorrectPassword\CorrectPassword.csproj", "{6186AAF4-E1BA-4B55-A8F8-C93E5825B34B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CorrectPassword", "CorrectPassword\CorrectPassword.csproj", "{6186AAF4-E1BA-4B55-A8F8-C93E5825B34B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anagramma", "Anagramma\Anagramma.csproj", "{EB371CEF-5BE0-4F49-AD1B-E0AD4E518952}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6186AAF4-E1BA-4B55-A8F8-C93E5825B34B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6186AAF4-E1BA-4B55-A8F8-C93E5825B34B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6186AAF4-E1BA-4B55-A8F8-C93E5825B34B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB371CEF-5BE0-4F49-AD1B-E0AD4E518952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB371CEF-5BE0-4F49-AD1B-E0AD4E518952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB371CEF-5BE0-4F49-AD1B-E0AD4E518952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB371CEF-5BE0-4F49-AD1B-E0AD4E518952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
