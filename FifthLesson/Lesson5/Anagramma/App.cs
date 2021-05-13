@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Timers;
 
 namespace Anagramma
 {
@@ -16,19 +17,36 @@ namespace Anagramma
             pt.OpenWindow();
         }
 
-        public void CatchWord(string word)
+        public void CatchWord(string word, string wordForCompare)
         {
-            parser.ParseWord(word);
+            DateTime start; 
+
+            start = DateTime.Now;
+            bool isAnagrammReg = parser.RegularMethod(wordForCompare);
+            TimeSpan regTime = DateTime.Now.Subtract(start);
+
+            start = DateTime.Now;
+            bool isAnagrammElim = parser.EliminationMethod(word, wordForCompare);
+            TimeSpan elimTime = DateTime.Now.Subtract(start);
+
+            start = DateTime.Now;
+            bool isAnagrammSort = parser.SortMethod(word, wordForCompare);
+            TimeSpan sortTime = DateTime.Now.Subtract(start);
+
+            start = DateTime.Now;
+            bool isAnagrammOneRun = parser.OneRunMethod(word, wordForCompare);
+            TimeSpan oneRunTime = DateTime.Now.Subtract(start);
+
+            pt.ShowResult(isAnagrammReg, regTime, isAnagrammElim, elimTime, isAnagrammSort, sortTime, isAnagrammOneRun, oneRunTime);
         }
 
         public bool СheckNumberOfRepetitions(string word)
         {
-            pt.ShowParsingRow(word);
             bool check = parser.CountRepetitions(word);
             return check;
         }
 
-        internal void ClearWord(ref string word)
+        public void ClearWord(ref string word)
         {
             parser.NonLetterAndNumDeleter(ref word);
         }
