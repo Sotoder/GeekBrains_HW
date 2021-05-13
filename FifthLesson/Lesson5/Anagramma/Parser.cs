@@ -60,12 +60,11 @@ namespace Anagramma
             else if (word.Equals(wordForCompare)) return true;
             else
             {
-                int count;
                 Dictionary<char, int> dict = new Dictionary<char, int>(occurrencesOfLetters);
 
                 foreach (char a in wordForCompare)
                 {
-                    dict.TryGetValue(a, out count);
+                    dict.TryGetValue(a, out int count);
                     if (count > 0)
                     {
                         dict[a] = count - 1;
@@ -90,7 +89,7 @@ namespace Anagramma
                 Array.Sort(word1);
                 Array.Sort(word2);
 
-                return String.Equals(word1.ToString(), word2.ToString());
+                return String.Concat<char>(word1).Equals(String.Concat<char>(word2));
             }
         }
 
