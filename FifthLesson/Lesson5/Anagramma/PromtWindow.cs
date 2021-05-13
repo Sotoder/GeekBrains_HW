@@ -51,10 +51,10 @@ namespace Anagramma
         {
             string delimitr = "\n-------------------------";
 
-            Console.Write("\nРегулярные выражения: " + (isAnagrammReg ? "Это анаграмма\n": "Это не анаграмма\n") + "Время на сравнение затрачено: " + regTime.ToString() + delimitr);
-            Console.Write("\nМетодом исключения: " + (isAnagrammElim ? "Это анаграмма\n" : "Это не анаграмма\n") + "Время на сравнение затрачено: " + elimTime.ToString() + delimitr);
-            Console.Write("\nМетодом сортировки: " + (isAnagrammSort ? "Это анаграмма\n" : "Это не анаграмма\n") + "Время на сравнение затрачено: " + sortTime.ToString() + delimitr);
-            Console.Write("\nЗа один пробег: " + (isAnagrammOneRun ? "Это анаграмма\n" : "Это не анаграмма\n") + "Время на сравнение затрачено: " + oneRunTime.ToString() + delimitr);
+            Console.Write("\nРегулярные выражения: " + (isAnagrammReg ? "Это анаграмма\n": "Это не анаграмма\n") + "Время на сравнение затрачено: " + regTime.TotalSeconds.ToString() + "сек" + delimitr);
+            Console.Write("\nМетодом исключения: " + (isAnagrammElim ? "Это анаграмма\n" : "Это не анаграмма\n") + "Время на сравнение затрачено: " + elimTime.TotalSeconds.ToString() + "сек" + delimitr);
+            Console.Write("\nМетодом сортировки: " + (isAnagrammSort ? "Это анаграмма\n" : "Это не анаграмма\n") + "Время на сравнение затрачено: " + sortTime.TotalSeconds.ToString() + "сек" + delimitr);
+            Console.Write("\nЗа один пробег: " + (isAnagrammOneRun ? "Это анаграмма\n" : "Это не анаграмма\n") + "Время на сравнение затрачено: " + oneRunTime.TotalSeconds.ToString() + "сек" + delimitr);
 
         }
 
