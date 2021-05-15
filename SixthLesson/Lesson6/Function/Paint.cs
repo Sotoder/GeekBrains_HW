@@ -28,7 +28,7 @@ namespace Function
             Console.WriteLine("---------------------");
         }
 
-        public void Table(DelegatesList.Fun2 F, double x, double a, double b)
+        public void Table(Func<double,double,double> F, double x, double a, double b)
         {
             Console.WriteLine("----- X ----- Y -----");
             while (x <= b)
