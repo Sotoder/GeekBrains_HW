@@ -9,8 +9,8 @@ namespace Function
     {
         static void Main()
         {
-            Paint test = new Paint();
-            test.PaintStart();
+            Paint paint = new Paint();
+            paint.PaintStart();
         }
     }
 }
