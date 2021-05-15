@@ -7,9 +7,9 @@ namespace Function
         public void PaintStart()
         {
             Console.WriteLine("Таблица функции x^2:");
-            Table(x => x * x, 2, 4);
+            Table(x => Math.Pow(x, 2), 2, 4);
             Console.WriteLine("Таблица функции a*x^2:");
-            Table((x, a) => a * x * x, 2, 2, 4);
+            Table((x, a) => a * Math.Pow(x,2), 2, 2, 4);
             Console.WriteLine("Таблица функции Sin:");
             Table(Math.Sin, 2, 4);
             Console.WriteLine("Таблица функции a*Sin(x):");
