@@ -7,7 +7,7 @@ namespace FunctionMin
 {
     class BinarParse
     {
-        //public Function[] da;  - Массив делегатов, просто для тренеровки
+        //public Function[] da;  - Создание массива делегатов в конструкторе, просто для тренеровки
         //public BinarParse()
         //{
         //    Function[] da = new Function[]
@@ -19,7 +19,7 @@ namespace FunctionMin
         //    this.da = da;
         //}
 
-        //public List<Function> da; - коллекция делегатов, просто для тренеровки
+        //public List<Function> da; - Создание коллекции делегатов в конструкторе, просто для тренеровки
         //public BinarParse()
         //{
         //    List<Function> da = new List<Function>
@@ -48,7 +48,6 @@ namespace FunctionMin
             BinaryReader bw = new BinaryReader(fs);
            
             double[] doubles = new double[fs.Length / sizeof(double)];
-            double d;
             for (int i = 0; i < fs.Length / sizeof(double); i++)
             {
                 doubles[i] = bw.ReadDouble();

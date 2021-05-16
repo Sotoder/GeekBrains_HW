@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FunctionMin
+namespace FunctionMin.View
 {
     class Menu
     {
