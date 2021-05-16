@@ -6,9 +6,9 @@ namespace CSVReader
     internal class UI
     {
 
-        public void PrintStudInfo(int bakalavr, int magistr, List<Student> list, int hightCourse, SortedDictionary<int, int> youth, Comparsion ComparsionMethod)
+        public void PrintStudInfo(int bakalavr, int magistr, List<Student> list, int hightCourse, SortedDictionary<int, int> youth, Comparison ComparisonMethod)
         {
-            list.Sort(new Comparison<Student>(ComparsionMethod));
+            list.Sort(new Comparison<Student>(ComparisonMethod));
             Console.WriteLine("Всего студентов:" + list.Count);
             Console.WriteLine("Магистров:{0}", magistr);
             Console.WriteLine("Бакалавров:{0}", bakalavr);

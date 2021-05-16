@@ -4,7 +4,7 @@ using System.IO;
 
 namespace CSVReader
 {
-    delegate int Comparsion(Student s1, Student s2);
+    delegate int Comparison(Student s1, Student s2);
     class App
     {
         UI ui;
@@ -25,10 +25,10 @@ namespace CSVReader
 
             StreamStart(ref list, ref bakalavr, ref magistr, ref hightCourse, ref youth);
 
-            ui.PrintStudInfo(bakalavr, magistr, list, hightCourse, youth, CourseAndAgeComprasion);
+            ui.PrintStudInfo(bakalavr, magistr, list, hightCourse, youth, CourseAndAgeComparison);
         }
 
-        public void StreamStart(ref List<Student> list, ref int bakalavr, ref int magistr, ref int hightCourse, ref SortedDictionary<int, int> newbee)
+        public void StreamStart(ref List<Student> list, ref int bakalavr, ref int magistr, ref int hightCourse, ref SortedDictionary<int, int> youth)
         {
             using StreamReader sr = new StreamReader("students_6.csv");
             {
@@ -44,8 +44,8 @@ namespace CSVReader
                         if (int.Parse(s[6]) >= 5) hightCourse++; // а) Подсчитать количество студентов учащихся на 5 и 6 курсах;
                         if (int.Parse(s[5]) >= 18 && int.Parse(s[5]) <= 20) // б) Подсчитать сколько студентов в возрасте от 18 до 20 лет на каком курсе учатся (*частотный массив);
                         {
-                            newbee.TryGetValue(int.Parse(s[6]), out int value);
-                            newbee[int.Parse(s[6])] = value == 0 ? 1 : value + 1;
+                            youth.TryGetValue(int.Parse(s[6]), out int value);
+                            youth[int.Parse(s[6])] = value == 0 ? 1 : value + 1;
                         }
                     }
                     catch (Exception e)
@@ -57,7 +57,7 @@ namespace CSVReader
         }
 
 
-        public int CourseAndAgeComprasion(Student st1, Student st2) // г) *отсортировать список по курсу и возрасту студента;
+        public int CourseAndAgeComparison(Student st1, Student st2) // г) *отсортировать список по курсу и возрасту студента;
         {
             if (st1.course == st2.course)
             {
@@ -69,9 +69,9 @@ namespace CSVReader
             }
         }
 
-        public int CourseComprasion(Student st1, Student st2) => st1.course >= st2.course ? 1 : -1; // в) отсортировать список по возрасту студента;
+        public int CourseComparison(Student st1, Student st2) => st1.course >= st2.course ? 1 : -1; // в) отсортировать список по возрасту студента;
 
-        public int NameComprasion(Student st1, Student st2) => String.Compare(st1.firstName, st2.firstName);    
+        public int NameComparison(Student st1, Student st2) => String.Compare(st1.firstName, st2.firstName);    
 
     }
 }
