@@ -17,7 +17,7 @@ namespace Function
         }
 
 
-        public void Table(DelegatesList.Fun F, double x, double b)
+        public void Table(Fun F, double x, double b)
         {
             Console.WriteLine("----- X ----- Y -----");
             while (x <= b)

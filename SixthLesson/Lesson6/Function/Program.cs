@@ -4,7 +4,7 @@
 
 namespace Function
 {
-    
+    public delegate double Fun(double x);
     class Program
     {
         static void Main()
