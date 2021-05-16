@@ -15,6 +15,8 @@ namespace FunctionMin
             this.mi = mi;
         }
 
+        //а) Сделать меню с различными функциями и представить пользователю выбор, для какой функции и на каком отрезке находить минимум.
+    
         public void StartMenu()
         {
             mi.SetParams(out double a, out double b, out double h);

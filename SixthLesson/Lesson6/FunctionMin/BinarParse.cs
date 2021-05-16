@@ -40,6 +40,7 @@ namespace FunctionMin
 
 
 
+        //б) *Переделать функцию Load, чтобы она возвращала массив считанных значений.Пусть она возвращает минимум через параметр (с использованием модификатора out).
         public double[] Load(string fileName, out double minValue)
         {
             minValue = 0;

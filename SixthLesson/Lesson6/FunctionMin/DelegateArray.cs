@@ -3,6 +3,8 @@
 namespace FunctionMin
 {
     public delegate double Function(double x);
+
+    //а) Использовать массив(или список) делегатов, в котором хранятся различные функции.
     class DelegateArray
     {
         Function[] delegates;
