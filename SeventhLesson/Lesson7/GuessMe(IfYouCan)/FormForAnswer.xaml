@@ -1,0 +1,13 @@
+﻿<Window x:Name="fForAnswer" x:Class="GuessMe_IfYouCan_.FormForAnswer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuessMe_IfYouCan_"
+        mc:Ignorable="d"
+        Title="Ответ" Height="147" Width="154" Closing="fForAnswer_Closing">
+    <Grid>
+        <TextBox Name="tbAnswer" HorizontalAlignment="Center" Text="" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center" Width="120" PreviewTextInput="tbAnswer_PreviewTextInput" KeyDown="tbAnswer_KeyDown"/>
+
+    </Grid>
+</Window>
