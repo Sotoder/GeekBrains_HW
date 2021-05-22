@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="TextToValue" Height="267" Width="252">
     <Grid Margin="0,0,0,2">
-        <TextBox Name ="tbDate" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,11,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name ="tbDate" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,11,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="tbDate_KeyDown"/>
         <Calendar Name="calendar" HorizontalAlignment="Center" VerticalAlignment="Center" SelectedDatesChanged="calendar_SelectedDatesChanged"/>
     </Grid>
 </Window>
