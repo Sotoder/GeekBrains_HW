@@ -6,12 +6,33 @@
         xmlns:local="clr-namespace:WeatherParser"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Menu Height="25" VerticalAlignment="Top">
-            <MenuItem Header="File">
-                <MenuItem Header="TextToValue" Click="TextToValue_Click"/>
-                <MenuItem Header="Exit" ></MenuItem>
-            </MenuItem>
-        </Menu>
+    <Grid Name ="Grid" Height="434" VerticalAlignment="Center" Margin="10,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name ="tbDate" TextAlignment="Center" HorizontalAlignment="Left" Margin="54,19,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="tbDate_KeyDown" Grid.Column="1"/>
+        <Calendar x:Name="calendar" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedDatesChanged="calendar_SelectedDatesChanged" Margin="25,49,0,0" Grid.Column="1"/>
+        <ListBox x:Name="lbWeather" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Town}"/>
+                        <TextBlock Text="{Binding Day}"/>
+                        <TextBlock Text="{Binding PressureMin}"/>
+                        <TextBlock Text="{Binding PressureMax}"/>
+                        <TextBlock Text="{Binding TemperatureMin}"/>
+                        <TextBlock Text="{Binding TemperatureMax}"/>
+                        <TextBlock Text="{Binding WindForceMin}"/>
+                        <TextBlock Text="{Binding WindForceMax}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            </ListBox>
     </Grid>
+
 </Window>
+ 

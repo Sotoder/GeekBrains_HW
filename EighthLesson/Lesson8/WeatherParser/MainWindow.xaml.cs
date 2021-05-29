@@ -23,12 +23,30 @@ namespace WeatherParser
         public MainWindow()
         {
             InitializeComponent();
+            calendar.SelectedDate = DateTime.Now;
+            Parser parser = new Parser();
+            var test = parser.Parsexml();     
+            lbWeather.ItemsSource = test;
         }
 
-        private void TextToValue_Click(object sender, RoutedEventArgs e)
+        private void calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-            TextToValue ttv = new TextToValue();
-            ttv.Show();
+            tbDate.Text = calendar.SelectedDate.Value.ToString("dd-MM-yy");
+        }
+
+        private void tbDate_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                if (DateTime.TryParse(tbDate.Text, out DateTime dt))
+                {
+                    calendar.SelectedDate = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Неверный формат даты!");
+                }
+            }
         }
     }
 }
