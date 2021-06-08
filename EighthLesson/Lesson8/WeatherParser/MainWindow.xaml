@@ -5,33 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherParser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Wether Info" Height="450" Width="800">
     <Grid Name ="Grid" Height="434" VerticalAlignment="Center" Margin="10,0,0,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBox x:Name ="tbDate" TextAlignment="Center" HorizontalAlignment="Left" Margin="54,19,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyDown="tbDate_KeyDown" Grid.Column="1"/>
         <Calendar x:Name="calendar" HorizontalAlignment="Left" VerticalAlignment="Top" SelectedDatesChanged="calendar_SelectedDatesChanged" Margin="25,49,0,0" Grid.Column="1"/>
-        <ListBox x:Name="lbWeather" >
+        <ListBox x:Name="lbWeather" Margin="0,19,0,19" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
-                        <TextBlock Text="{Binding Town}"/>
-                        <TextBlock Text="{Binding Day}"/>
-                        <TextBlock Text="{Binding PressureMin}"/>
-                        <TextBlock Text="{Binding PressureMax}"/>
-                        <TextBlock Text="{Binding TemperatureMin}"/>
-                        <TextBlock Text="{Binding TemperatureMax}"/>
-                        <TextBlock Text="{Binding WindForceMin}"/>
-                        <TextBlock Text="{Binding WindForceMax}"/>
+                        <Border BorderThickness="1" BorderBrush="Black">
+                            <TextBlock Background="#FFFFF970">
+                                <TextBlock Text="{Binding Town}"/>
+                                <LineBreak/>
+                                <TextBlock Text="{Binding Day}"/>
+                                <LineBreak/>
+                                <TextBlock Text="Давление: " TextWrapping="Wrap">
+                                    <TextBlock Text="{Binding PressureMin}"/>
+                                    <TextBlock Text="-"/>
+                                    <TextBlock Text="{Binding PressureMax}"/>
+                                    <TextBlock Text="мм. рт. ст. "/>
+                                </TextBlock>
+                                <LineBreak/>
+                                <TextBlock Text="Температура: " TextWrapping="Wrap">
+                                    <TextBlock Text="{Binding TemperatureMin}"/>
+                                    <TextBlock Text="-"/>
+                                    <TextBlock Text="{Binding TemperatureMax}"/>
+                                    <TextBlock Text="℃ "/>
+                                </TextBlock>
+                                <LineBreak/>
+                                <TextBlock Text="Ветер: " TextWrapping="Wrap">
+                                    <TextBlock Text="{Binding WindForceMin}"/>
+                                    <TextBlock Text="-"/>
+                                    <TextBlock Text="{Binding WindForceMax}"/>
+                                    <TextBlock Text="м/с "/>
+                                </TextBlock>
+                            </TextBlock>
+                        </Border>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-            </ListBox>
+        </ListBox>
     </Grid>
 
 </Window>

@@ -49,10 +49,10 @@ namespace WeatherParser
                             new WeatherData()
                             {
                                 Town = xmlFromTown.Attribute("sname").Value,
-                                Day = Convert.ToDateTime(forecast.Attribute("day").Value + @"/" +
-                                                         forecast.Attribute("month").Value + @"/" +
-                                                         forecast.Attribute("year").Value + @" " +
-                                                         forecast.Attribute("hour").Value + @":00:00.000"),
+                                Day = forecast.Attribute("day").Value + @"/" +
+                                        forecast.Attribute("month").Value + @"/" +
+                                        forecast.Attribute("year").Value + @" " +
+                                        forecast.Attribute("hour").Value + @":00:00.000",
                                 PressureMax = forecast.Element("PRESSURE").Attribute("max").Value,
                                 PressureMin = forecast.Element("PRESSURE").Attribute("min").Value,
                                 TemperatureMax = forecast.Element("TEMPERATURE").Attribute("max").Value,
