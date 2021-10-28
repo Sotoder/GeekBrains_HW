@@ -41,6 +41,7 @@ namespace WeatherParser
                     .Descendants("REPORT")
                     .Descendants("TOWN")
                     .ToList();
+
                 foreach(var xmlFromTown in weatherFromXML)
                 {
                     foreach (var forecast in xmlFromTown.Elements("FORECAST"))
